@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>embroidery-converter</Name>
+  <Repository>mavenwright/embroidery-converter:1.0.0</Repository>
+  <Registry>https://hub.docker.com/r/mavenwright/embroidery-converter</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/mavenwright/embroidery-converter/issues</Support>
+  <Project>https://mavenwright.com/en/stitchkit/tools/embroidery-file-converter</Project>
+  <Overview>Browser-only viewer and converter for PES, DST, JEF, EXP and VP3 embroidery files. The container serves a static web page; conversion runs in the visitor's browser, so embroidery files never leave the device and nothing is uploaded to the server. The converter is a TypeScript port of pystitch, the library Ink/Stitch uses, tested against it on a synthetic corpus (the writers give the same bytes and the readers the same stitches, with documented exceptions), and is free and MIT licensed. Limits: 1,000,000 stitches or 30 MB per file. Made by MavenWright, the team behind StitchKit (a commercial embroidery app). Set SHOW_CREDIT to false to remove the optional footer link. No volumes or persistent data are needed.</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/mavenwright/unraid-templates/main/embroidery-converter.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/mavenwright/embroidery-converter/main/deploy/logo.png</Icon>
+  <ExtraSearchTerms>embroidery pes dst jef exp vp3 stitch converter viewer</ExtraSearchTerms>
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Port the converter page is served on (the container listens on 8080)." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Show credit" Target="SHOW_CREDIT" Default="true" Mode="" Description="true shows the optional &quot;Edit in StitchKit&quot; footer link. false, 0 or no removes it." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+</Container>

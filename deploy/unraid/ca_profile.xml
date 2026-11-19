@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>Unraid templates for the open-source apps made by MavenWright, the team behind StitchKit. The first one is the Embroidery File Converter, a browser-only viewer and converter for PES, DST, JEF, EXP and VP3 files. Support is through the GitHub issue tracker of each project.</Profile>
+  <Icon>https://raw.githubusercontent.com/mavenwright/embroidery-converter/main/deploy/logo.png</Icon>
+  <WebPage>https://mavenwright.com/en/stitchkit/tools/embroidery-file-converter</WebPage>
+</CommunityApplications>

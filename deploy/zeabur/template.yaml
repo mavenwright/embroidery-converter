@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://schema.zeabur.app/template.json
+apiVersion: zeabur.com/v1
+kind: Template
+metadata:
+  name: Embroidery File Converter
+spec:
+  description: Browser-only viewer and converter for PES, DST, JEF, EXP and VP3 embroidery files. Files never leave the device. Free and MIT licensed.
+  icon: https://raw.githubusercontent.com/mavenwright/embroidery-converter/main/deploy/logo.svg
+  variables:
+    - key: PUBLIC_DOMAIN
+      type: DOMAIN
+      name: Public Domain
+      description: Domain the converter page is served on.
+  tags:
+    - Tool
+    - Utilities
+  readme: |
+    # Embroidery File Converter
+
+    A browser-only viewer and converter for PES, DST, JEF, EXP and VP3 embroidery files.
+    The service only serves a static page. Conversion runs in the visitor's browser, so
+    embroidery files never leave the device and nothing is uploaded to your server.
+
+    It is a TypeScript port of pystitch (the library Ink/Stitch uses), tested against it:
+    on a synthetic test corpus the writers produce the same bytes and the readers return the same stitches for the same input, with documented
+    exceptions (stand-in colours for designs that store none). Limits: 1,000,000 stitches or 30 MB per file. Test-stitch a converted
+    file before production.
+
+    ## Deployment notes
+
+    1. Bind `PUBLIC_DOMAIN` to the `embroidery-converter` service.
+    2. Open `https://<PUBLIC_DOMAIN>`. No login, no database, no volumes.
+    3. The footer has an optional "Edit in StitchKit" link. Set the `SHOW_CREDIT`
+       variable to `false` on the service to remove it.
+
+    ## About
+
+    Made by MavenWright, the team behind StitchKit (a commercial embroidery app). The
+    converter is free and MIT licensed.
+
+    - Tool page: https://mavenwright.com/en/stitchkit/tools/embroidery-file-converter
+    - Source: https://github.com/mavenwright/embroidery-converter
+  services:
+    - name: embroidery-converter
+      icon: https://raw.githubusercontent.com/mavenwright/embroidery-converter/main/deploy/logo.svg
+      template: PREBUILT_V2
+      domainKey: PUBLIC_DOMAIN
+      spec:
+        source:
+          image: mavenwright/embroidery-converter:1.0.0
+        ports:
+          - id: web
+            port: 8080
+            type: HTTP
+        env:
+          SHOW_CREDIT:
+            default: "true"
+            expose: true

@@ -1,0 +1,27 @@
+{
+  "name": "embroidery-converter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-only PES/DST/JEF/EXP/VP3 embroidery converter, a TypeScript port of pystitch.",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "validate:deploy": "tsx tools/validate-deploy.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "fast-xml-parser": "^5.12.1",
+    "jsdom": "^31.0.1",
+    "smol-toml": "^1.9.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0",
+    "yaml": "^2.9.1"
+  }
+}

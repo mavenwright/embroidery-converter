@@ -1,0 +1,9 @@
+node_modules
+dist
+corpus/local
+tools/parity/.venv
+.superpowers/
+.vitest
+__pycache__/
+.launch-private/
+.DS_Store

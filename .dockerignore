@@ -1,0 +1,12 @@
+# Everything is excluded except the files the image build and the image itself need.
+**
+!package.json
+!package-lock.json
+!tsconfig.json
+!vite.config.ts
+!app
+!src
+!public
+!docker
+!LICENSE
+!NOTICE
