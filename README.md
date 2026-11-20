@@ -8,6 +8,8 @@ A browser-only viewer and converter for **PES, DST, JEF, EXP and VP3** machine e
 
 Made by MavenWright, the team behind StitchKit, a commercial embroidery app. The converter is free, MIT licensed and does not need StitchKit.
 
+![A sample PES design open in the converter: preview, size, stitch and colour counts, and the Convert to DST option with its colour warning](docs/screenshot.png)
+
 ## What it does
 
 - Opens a PES, DST, JEF, EXP or VP3 file and shows a preview with the stitch count, colour count and size.
