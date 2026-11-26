@@ -1,5 +1,7 @@
 # Embroidery File Converter
 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24558829-blue)](https://doi.org/10.5281/zenodo.24558829)
+
 A browser-only viewer and converter for **PES, DST, JEF, EXP and VP3** machine embroidery files. It is a TypeScript port of [pystitch](https://github.com/inkstitch/pystitch) 1.0.1, with a small Vite web app and a Docker image.
 
 - Hosted tool: https://mavenwright.com/en/stitchkit/tools/embroidery-file-converter
