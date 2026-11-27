@@ -135,6 +135,16 @@ See `tools/parity/README.md` for the scripts.
 
 Templates for self-hosting platforms (Dokploy, Easypanel, Umbrel, Unraid, Zeabur) are in `deploy/`, with the Docker Hub description in `deploy/docker-hub-README.md`. They all run the same image on port 8080.
 
+## Mirrors and listings
+
+- Documentation: https://mavenwright.gitbook.io/mavenwright-docs (formats, self-hosting with Docker, library API)
+- Gitea: https://gitea.com/mavenwright/embroidery-converter
+- Docker Hub: https://hub.docker.com/r/mavenwright/embroidery-converter
+- Unraid Community Applications: https://ca.unraid.net/apps/embroidery-converter-04jm9mo0pf889g
+- Open Hub: https://openhub.net/p/embroidery-converter
+- freshcode.club: https://freshcode.club/projects/embroidery-converter
+- Zenodo archive: https://doi.org/10.5281/zenodo.24558829
+
 ## Licence
 
 MIT. Copyright (c) 2026 MavenWright. See `LICENSE`.
